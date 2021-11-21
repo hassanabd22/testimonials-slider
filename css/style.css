@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* start the style */
+.container {
+    display: flex;
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(/images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10vw;
+}
+
+.text {
+    flex-basis: 60%;
+    z-index: 10;
+}
+
+.text p {
+    font-size: 32px;
+    line-height: 1.8;
+    font-weight: 300;
+
+}
+
+.text h4 {
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 10px;
+
+}
+
+.img {
+    
+    margin-left: -100px;
+}
+
+.img img {
+    height: 70vh;
+}
+
+.arro {
+    width: 80px;
+    position: absolute;
+    left: 50vw;
+    top: 67vh;
+    background-color: #fff;
+    box-shadow: 0 0 16px #ddd ;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.curve {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.pattern {
+    position: absolute;
+    right: 0;
+    bottom: 50;
+}
+
+span {
+    font-size: 14px;
+    color: hsl(240, 18%, 77%);
+}
+
+
+@media (max-width:800px) {
+    body {
+        height: 100vh;
+        background-size: cover;
+    }
+    
+    /* start the style */
+    .container {
+        flex-direction: column;
+        width: 80vw;
+        height:80vh;   
+        text-align: center;
+    }
+    
+    .text {
+       order: 2;
+       background-image: url(/images/pattern-quotes.svg);
+        background-repeat: no-repeat;
+        background-position-x: 10vw;
+       margin-top: 50px;
+
+    }
+    
+    .text p {
+        font-size: 14px;
+    
+    }
+    .img {
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .img img {
+        height: 35vh;
+    }
+    
+    .arro {
+        left: 30vw;
+        top: 33vh;
+    }
+    
+    .curve {
+        width: 100%;
+    }
+    .pattern {
+        width: 100%;
+        top:0;
+        left: 0;
+    }
+    .text h4 {
+        margin-right: 0;
+    
+    }
+}
